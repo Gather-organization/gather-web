@@ -1,28 +1,42 @@
+import { BiHome } from 'react-icons/bi';
 import styled, { css } from 'styled-components';
-import { FaBars } from 'react-icons/fa';
 
-export const Header = styled.header`
-  display: grid;
-  grid-template-columns: [column1] 28% [column2] 42% [column3] 28%;
+export const NavBarPlaceholder = styled.div`
+  height: 100%;
+  width: 200px;
+  flex: 1;
+`;
+
+export const NavBarContainer = styled.header`
+  display: flex;
   align-items: center;
   justify-content: center;
 
-  background: ${({ theme }) => theme.body};
-  border-bottom: 1.4px solid ${({ theme }) => theme.border};
+  height: 100%;
+  width: 200px;
+  max-height: 95vh;
+
+  padding: 1rem;
+  flex: 1;
+
+  position: fixed;
 `;
 
-export const HeaderColumn1 = styled.div`
-  grid-column: column1;
-`;
-export const HeaderColumn2 = styled.div`
-  grid-column: column2;
+export const Header = styled.div`
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+
   display: flex;
-  justify-content: center;
-`;
-export const HeaderColumn3 = styled.div`
-  grid-column: column3;
-  display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  background-color: ${({ theme }) => theme.background};
+
+  border-radius: var(--radius);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 10px;
 `;
 
 export const HeaderTitle = styled.a`
@@ -38,31 +52,20 @@ export const HeaderTitle = styled.a`
   }
 `;
 
-export const IconBackground = styled.div`
-  width: 2em;
-  height: 2em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  transition: 0.3s;
-
-  &:active {
-    background: var(--purple-300);
-    border-radius: 100%;
-  }
-`;
-
 const iconCss = css`
-  width: 1.4em;
-  height: 1.4em;
+  width: 90%;
+  height: 40px;
+
+  padding: 6px;
+  border-radius: 8px;
 
   color: ${({ theme }) => theme.accent};
+  background-color: ${({ theme }) => theme.accentBackground};
 
   cursor: pointer;
 `;
 
-export const MenuIcon = styled(FaBars)`
+export const HomeIcon = styled(BiHome)`
   ${iconCss}
   float: left;
 `;

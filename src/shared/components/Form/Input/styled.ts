@@ -19,7 +19,7 @@ export const StyledInput = styled.input<Props>`
   color: ${(props) => (props.$error ? 'var(--error)' : props.theme.text)};
   border: 2px solid
     ${(props) => (props.$error ? 'var(--error)' : props.theme.border)};
-  background-color: ${({ theme }) => theme.body};
+  background-color: ${({ theme }) => theme.background};
 
   &:hover,
   &:focus {
@@ -45,7 +45,7 @@ export const StyledInput = styled.input<Props>`
 
   &:-webkit-autofill {
     background-color: ${({ theme }) => theme.accentBackground};
-    -webkit-box-shadow: 0 0 0px 1000px ${({ theme }) => theme.body} inset;
+    -webkit-box-shadow: 0 0 0px 1000px ${({ theme }) => theme.background} inset;
     -webkit-text-fill-color: ${({ theme }) => theme.text};
   }
 `;

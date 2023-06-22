@@ -31,6 +31,16 @@ export const GlobalStyles = styled.createGlobalStyle`
     --purple-800: #16143d;
     --purple-900: #010029;
 
+    /* Accent */
+    --accent-50: #e3f2fd;
+    --accent-100: #dcdcff;
+    --accent-300: #ccccff;
+    --accent-400: #9794ff;
+    --accent-500: #f4f6fa;
+    --accent-700: #3c389e;
+    --accent-800: #16143d;
+    --accent-900: #010029;
+
     /*#endregion Colors*/
   }
 
@@ -39,6 +49,15 @@ export const GlobalStyles = styled.createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     background: none;
+    background-color: '#FFF';
+  }
+
+  body,
+  html {
+    height: 100%;
+    /* min-height: 100vh; */
+    width: 100%;
+    margin: 0;
   }
 
   body {
@@ -55,6 +74,7 @@ export const GlobalStyles = styled.createGlobalStyle`
     background: ${({ theme }) => theme.body};
 
     overflow-x: hidden;
+    overscroll-behavior-y: none;
 
     /*#region DatePicker*/
     .react-datepicker-wrapper {

@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 interface Props {
   defaultValues?: {};
   children: JSX.Element[] | JSX.Element;
-  onSubmit: () => {};
+  onSubmit: () => {} | void;
 }
 
 export const Form = (props: Props) => {

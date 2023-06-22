@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  height: 100%;
+  height: 120vh;
 `;
 
 interface FlexSpaceProps {
