@@ -33,7 +33,13 @@ export default function App() {
     flex-direction: row;
 
     height: 100%;
+    width: 100%;
+
     padding-top: 5vh;
+
+    background: rgba(150, 150, 150, 0.3);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
   `;
 
   return (

@@ -1,6 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import { Card, Container, Title } from 'shared/components';
+import { Card, Title } from 'shared/components';
+import { Container } from 'shared/components/Layouts';
 import { HomePageContent } from './styled';
 
 import 'swiper/swiper.css';
@@ -13,7 +14,6 @@ export const Home = () => {
           <Title>Something</Title>
           <div>something something other something</div>
         </Card>
-        <SwipeTest />
       </HomePageContent>
     </Container>
   );

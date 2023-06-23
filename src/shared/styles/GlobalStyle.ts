@@ -1,3 +1,5 @@
+// import waves from 'shared/assets/images/waves.svg';
+import mesh from 'shared/assets/images/mesh.png';
 import * as styled from 'styled-components';
 
 export const GlobalStyles = styled.createGlobalStyle`
@@ -49,13 +51,11 @@ export const GlobalStyles = styled.createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     background: none;
-    background-color: '#FFF';
   }
 
   body,
   html {
     height: 100%;
-    /* min-height: 100vh; */
     width: 100%;
     margin: 0;
   }
@@ -71,7 +71,9 @@ export const GlobalStyles = styled.createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     color: ${({ theme }) => theme.text};
 
-    background: ${({ theme }) => theme.body};
+    background-color: ${({ theme }) => theme.body};
+    background: url(${mesh}) no-repeat center center;
+    background-size: cover;
 
     overflow-x: hidden;
     overscroll-behavior-y: none;

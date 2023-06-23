@@ -1,25 +1,14 @@
-import { useEffect, useRef, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 
 import { SideBarData } from 'shared/data/SideBarData';
-import { RootState, authActions } from 'shared/store';
-import { Header, HomeIcon, NavBarContainer, NavBarPlaceholder } from './styled';
+import { RootState } from 'shared/store';
+import { HomeIcon, List, NavBarContainer, NavBarPlaceholder } from './styled';
 
 export const NavBar = () => {
-  const [navMenu, setNavMenu] = useState(false);
   const [userRoles, setUserRoles] = useState<string[]>([]);
 
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
-
-  const auth = useSelector<RootState>((state) => state.auth.isAuthenticated);
   const roles = useSelector<RootState>((state) => state.auth.roles);
-
-  const toggleDropdown = () => setNavMenu(!navMenu);
-  const logoutHandler = () => dispatch(authActions.signOut());
-
-  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const rolesArray: any[] = roles as string[];
@@ -36,11 +25,11 @@ export const NavBar = () => {
     <>
       <NavBarPlaceholder />
       <NavBarContainer>
-        <Header>
+        <List>
           <HomeIcon />
           <div>test</div>
           <div>test</div>
-        </Header>
+        </List>
       </NavBarContainer>
     </>
   );

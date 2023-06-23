@@ -3,26 +3,28 @@ import styled, { css } from 'styled-components';
 
 export const NavBarPlaceholder = styled.div`
   height: 100%;
-  width: 200px;
+  max-width: 200px;
+  min-width: 200px;
   flex: 1;
 `;
 
-export const NavBarContainer = styled.header`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+export const NavBarContainer = styled.div`
+  position: fixed;
 
   height: 100%;
   width: 200px;
   max-height: 95vh;
 
-  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex: 1;
 
-  position: fixed;
+  padding: 1rem;
+  padding-right: 0;
 `;
 
-export const Header = styled.div`
+export const List = styled.div`
   flex: 1;
   height: 100%;
   width: 100%;
@@ -36,20 +38,7 @@ export const Header = styled.div`
   background-color: ${({ theme }) => theme.background};
 
   border-radius: var(--radius);
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 10px;
-`;
-
-export const HeaderTitle = styled.a`
-  text-decoration: none;
-  font-size: 24px;
-  font-weight: 700;
-  padding: 0.4em;
-
-  color: ${({ theme }) => theme.accent};
-
-  @media (max-width: 640px) {
-    font-size: 25px;
-  }
+  /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 10px; */
 `;
 
 const iconCss = css`

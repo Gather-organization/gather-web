@@ -1,5 +1,6 @@
-import { Button, FlexSpace, Modal, Options, Wrapper } from 'shared/components';
 import deleteImage from 'shared/assets/images/deleteImage.svg';
+import { Button, Modal, Options } from 'shared/components';
+import { FlexSpace, Wrapper } from 'shared/components/Layouts';
 import { DeleteSvg, SvgContainer } from './styled';
 
 interface Props {
