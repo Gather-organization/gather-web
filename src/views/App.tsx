@@ -1,9 +1,9 @@
-import { useState } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Route, Routes } from 'react-router';
 
 import { darkTheme, lightTheme } from 'shared/styles/Theme';
 import styled, { ThemeProvider } from 'styled-components';
-import { GlobalStyles, Header, Home, NavBar } from 'views';
+import { GlobalStyles, Header, Home, NavBar, SignIn } from 'views';
 
 export default function App() {
   const [theme, setTheme] = useState('light');
@@ -16,30 +16,34 @@ export default function App() {
   //   window.localStorage.setItem('theme', theme);
   // }, []);
 
-  const Container = styled.div`
-    width: 100vw;
-    min-height: 100vh;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    overflow-y: hidden;
-  `;
+  useEffect(() => {
+    const currentTheme = JSON.parse(window.localStorage.getItem('currenteme')!);
+    if (currentTheme) setTheme(currentTheme);
+  }, []);
 
-  const Content = styled.div`
+  const Container = styled.div`
     position: absolute;
     top: 0;
     left: 0;
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 
     height: 100%;
     width: 100%;
 
-    padding-top: 5vh;
-
     background: rgba(150, 150, 150, 0.3);
     backdrop-filter: blur(50px);
-    -webkit-backdrop-filter: blur(50px);
+  `;
+
+  const Content = styled.div`
+    width: 100%;
+    width: 100%;
+
+    flex: 1;
+
+    display: flex;
+    flex-direction: row;
   `;
 
   return (
@@ -48,11 +52,9 @@ export default function App() {
         <Header />
         <Content>
           <NavBar />
-
           <Routes>
-            {/* Public routes */}
             <Route path="/" element={<Home />} />
-            {/* <Route path="*" element={<NotFound />} /> */}
+            <Route path="login" element={<SignIn />} />
           </Routes>
         </Content>
       </Container>

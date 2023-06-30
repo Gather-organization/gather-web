@@ -21,7 +21,7 @@ export const CardTitle = styled.h1`
 
   font-weight: 600;
   font-size: 36px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Quicksand', sans-serif;
 
   color: var(--gray-700);
 

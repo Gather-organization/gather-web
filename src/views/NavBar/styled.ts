@@ -38,7 +38,9 @@ export const List = styled.div`
   background-color: ${({ theme }) => theme.background};
 
   border-radius: var(--radius);
-  /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 10px; */
+
+  background: rgba(246, 248, 250, 0.75);
+  background: rgba(255, 255, 255, 0.9);
 `;
 
 const iconCss = css`
@@ -50,8 +52,19 @@ const iconCss = css`
 
   color: ${({ theme }) => theme.accent};
   background-color: ${({ theme }) => theme.accentBackground};
+  border: 2px solid ${({ theme }) => theme.accentBackground};
 
   cursor: pointer;
+
+  transition: all 400ms ease;
+
+  :hover {
+    border: 2px solid #becdfa;
+  }
+
+  :active {
+    border: 2px solid ${({ theme }) => theme.accent};
+  }
 `;
 
 export const HomeIcon = styled(BiHome)`

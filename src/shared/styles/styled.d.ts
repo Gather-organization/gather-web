@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import 'styled-components';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
@@ -7,6 +7,7 @@ declare module 'styled-components' {
     toggleBorder: string;
     background: string;
     border: string;
+    main: string;
     accent: string;
     accentBackground: string;
     hoverBorder: string;

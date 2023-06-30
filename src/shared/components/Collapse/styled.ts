@@ -1,5 +1,5 @@
-import styled, { css } from 'styled-components';
 import { IoIosArrowDown } from 'react-icons/io';
+import styled, { css } from 'styled-components';
 
 interface Props {
   underline?: boolean;
@@ -9,7 +9,7 @@ export const CollapseContainer = styled.div<Props>`
   width: 100%;
   padding: 0.6em 1em;
 
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto';
+  font-family: var(--fontFamily);
 
   outline: none;
   border-radius: var(--radius);

@@ -8,11 +8,9 @@ export const HeaderStyled = styled.header`
   justify-content: center;
   height: 5vh;
 
-  background: ${({ theme }) => theme.body};
+  background: rgba(246, 248, 250, 0.7);
 
-  position: fixed;
-  width: 100%;
-  z-index: 1;
+  min-width: 100vw;
 `;
 
 export const HeaderColumn1 = styled.div`
@@ -36,6 +34,7 @@ export const HeaderTitle = styled.a`
   padding: 0.4em;
 
   color: var(--purple-500);
+  color: ${({ theme }) => theme.accent};
 
   @media (max-width: 640px) {
     font-size: 25px;
@@ -61,7 +60,7 @@ const iconCss = css`
   width: 1.4em;
   height: 1.4em;
 
-  color: var(--purple-500);
+  color: ${({ theme }) => theme.accent};
 
   cursor: pointer;
 `;

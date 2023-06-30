@@ -14,7 +14,7 @@ export const StyledTextArea = styled.textarea<Props>`
   resize: none;
 
   font-size: 16px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto';
+  font-family: var(--fontFamily);
 
   transition: 0.4s;
 

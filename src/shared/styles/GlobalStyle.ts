@@ -44,6 +44,8 @@ export const GlobalStyles = styled.createGlobalStyle`
     --accent-900: #010029;
 
     /*#endregion Colors*/
+
+    --fontFamily: 'Quicksand', 'Roboto', sans-serif;
   }
 
   * {
@@ -64,9 +66,8 @@ export const GlobalStyles = styled.createGlobalStyle`
     min-width: 320px;
 
     font-size: 16px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-      'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-      'Helvetica Neue', sans-serif;
+    font-family: 'Quicksand', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+      'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: ${({ theme }) => theme.text};
@@ -87,7 +88,7 @@ export const GlobalStyles = styled.createGlobalStyle`
       > input::placeholder {
         color: var(--gray-500);
         font-size: 16px;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto';
+        font-family: var(--fontFamily);
       }
     }
 

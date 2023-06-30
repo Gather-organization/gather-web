@@ -24,7 +24,7 @@ export const StyledDropzone = styled.div<Props>`
 
   text-align: center;
   font-size: 16px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto';
+  font-family: var(--fontFamily);
   color: var(--gray-500);
 
   transition: all 200ms ease;
