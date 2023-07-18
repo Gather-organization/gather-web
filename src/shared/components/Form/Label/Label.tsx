@@ -3,8 +3,8 @@ import styled from 'styled-components';
 export const Label = styled.label`
   padding-left: 0.1em;
 
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 1.25rem;
+  font-weight: bold;
 
   color: ${({ theme }) => theme.text};
 `;

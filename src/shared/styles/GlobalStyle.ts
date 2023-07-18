@@ -66,8 +66,7 @@ export const GlobalStyles = styled.createGlobalStyle`
     min-width: 320px;
 
     font-size: 16px;
-    font-family: 'Quicksand', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
-      'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Lato', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: ${({ theme }) => theme.text};

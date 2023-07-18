@@ -1,4 +1,3 @@
-import { InputDiv, ReadOnlyInput, StyledInput } from './styled';
 import {
   Control,
   Controller,
@@ -8,7 +7,8 @@ import {
 } from 'react-hook-form';
 import InputMask from 'react-input-mask';
 
-import { Label, ErrorsNote } from '..';
+import { ErrorsNote, Label } from '..';
+import { InputDiv, ReadOnlyInput, StyledInput } from './styled';
 
 interface Props {
   name: string;
@@ -64,7 +64,7 @@ export const Input = (props: Props) => {
                   disabled={disabled}
                 />
 
-                {errors && <ErrorsNote error={errors} />}
+                <ErrorsNote error={errors ?? []} />
               </>
             )}
           />

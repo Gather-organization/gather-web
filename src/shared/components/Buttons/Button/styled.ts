@@ -15,8 +15,8 @@ export const StyledButton = styled.button<Props>`
   text-decoration: none;
   color: var(--white);
 
-  background: var(--purple-500);
-  border: 2px solid var(--purple-500);
+  background: ${({ theme }) => theme.accent};
+  border: 2px solid ${({ theme }) => theme.accent};
   border-radius: 10px;
   outline: none;
 
@@ -31,8 +31,8 @@ export const StyledButton = styled.button<Props>`
 
   &:active {
     background-color: var(--purple-300);
-    border: 2px solid var(--purple-500);
-    color: var(--purple-500);
+    border: 2px solid ${({ theme }) => theme.accent};
+    color: ${({ theme }) => theme.accent};
   }
 
   &:disabled {

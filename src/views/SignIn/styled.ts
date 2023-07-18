@@ -13,14 +13,6 @@ export const SignInBackground = styled.div`
   align-items: center;
   justify-content: center;
 
-  background: rgb(124, 236, 167);
-  background: linear-gradient(
-    196deg,
-    rgba(124, 236, 167, 1) 0%,
-    rgba(97, 183, 194, 1) 42%,
-    rgba(54, 97, 237, 1) 99%
-  );
-
   background: url(${patterns}) no-repeat center center;
   background-size: cover;
 
@@ -49,7 +41,8 @@ export const SignInForm = styled.div`
   flex-direction: column;
   gap: 6rem;
 
-  background-color: white;
+  background: rgba(250, 250, 250, 0.5);
+  backdrop-filter: blur(50px);
 `;
 
 export const SignInImage = styled.img`
@@ -77,6 +70,7 @@ export const SignInTitle = styled.h1`
   font-family: 'Montserrat', sans-serif;
 
   color: var(--gray-700);
+  /* color: #212529; */
 
   @media (max-width: 700px) {
     font-size: 30px;
@@ -88,7 +82,7 @@ export const SignInInputs = styled.div`
 
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 1rem;
 `;
 
 export const ErrorNote = styled.span`
@@ -111,9 +105,9 @@ export const LinkButton = styled.a<LinkProps>`
   text-decoration: underline;
   text-decoration-thickness: 2px;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: bold;
 
-  color: ${(props) => (props.secondary ? '#9794ff' : 'var(--purple-500)')};
+  color: ${({ theme }) => theme.accent};
 `;
 
 export const RegisterInfo = styled.span`

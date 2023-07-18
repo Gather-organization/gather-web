@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { DeepMap, FieldValues, FieldError } from 'react-hook-form';
+import { DeepMap, FieldError, FieldValues } from 'react-hook-form';
 import styled from 'styled-components';
 
 const Note = styled.span`
@@ -34,5 +34,5 @@ export const ErrorsNote = ({ error }: Props) => {
     handleErrorNote(error);
   }, [error]);
 
-  return <>{errorNote && <Note>{errorNote}</Note>}</>;
+  return <Note>{errorNote}</Note>;
 };
