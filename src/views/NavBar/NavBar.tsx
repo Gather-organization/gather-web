@@ -1,19 +1,13 @@
-import { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import { SideBarData } from 'shared/data/SideBarData';
-import { RootState } from 'shared/store';
+import { useRoles } from 'shared/hooks';
+
 import { HomeIcon, List, NavBarContainer, NavBarPlaceholder } from './styled';
 
 export const NavBar = () => {
-  const [userRoles, setUserRoles] = useState<string[]>([]);
-
-  const roles = useSelector<RootState>((state) => state.auth.roles);
-
-  useEffect(() => {
-    const rolesArray: any[] = roles as string[];
-    setUserRoles(rolesArray);
-  }, [roles]);
+  const { userRoles } = useRoles();
 
   useEffect(() => {
     const data = SideBarData.filter(
@@ -29,6 +23,7 @@ export const NavBar = () => {
           <HomeIcon />
           <div>test</div>
           <div>test</div>
+          <Link to="signup">sign up</Link>
         </List>
       </NavBarContainer>
     </>

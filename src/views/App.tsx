@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router';
+import { ThemeProvider } from 'styled-components';
 
+import { ContentLayout } from 'shared/components/Layouts';
 import { darkTheme, lightTheme } from 'shared/styles/Theme';
-import styled, { ThemeProvider } from 'styled-components';
-import { GlobalStyles, Header, Home, NavBar, SignIn } from 'views';
+import { GlobalStyles, Home, SignIn } from 'views';
 
 export default function App() {
   const [theme, setTheme] = useState('light');
@@ -21,43 +22,15 @@ export default function App() {
     if (currentTheme) setTheme(currentTheme);
   }, []);
 
-  const Container = styled.div`
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    display: flex;
-    flex-direction: column;
-
-    height: 100%;
-    width: 100%;
-
-    background: rgba(150, 150, 150, 0.3);
-    backdrop-filter: blur(50px);
-  `;
-
-  const Content = styled.div`
-    width: 100%;
-    width: 100%;
-
-    flex: 1;
-
-    display: flex;
-    flex-direction: row;
-  `;
-
   return (
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
-      <Container>
-        <Header />
-        <Content>
-          <NavBar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="login" element={<SignIn />} />
-          </Routes>
-        </Content>
-      </Container>
+      <Routes>
+        <Route element={<ContentLayout />}>
+          <Route path="/" element={<Home />} />
+        </Route>
+        <Route path="login" element={<SignIn />} />
+        <Route path="signup" element={<div>test</div>} />
+      </Routes>
       <GlobalStyles />
     </ThemeProvider>
   );

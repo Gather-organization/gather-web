@@ -1,6 +1,8 @@
 import patterns from 'shared/assets/images/patternpad.svg';
 import styled from 'styled-components';
 
+const screenBreak = 800;
+
 export const SignInBackground = styled.div`
   position: absolute;
   top: 0;
@@ -8,21 +10,11 @@ export const SignInBackground = styled.div`
   height: 100%;
   width: 100%;
 
-  display: grid;
-  grid-template-columns: [SignInInfo] 40% [SignInForm] 60%;
-  align-items: center;
-  justify-content: center;
-
   background: url(${patterns}) no-repeat center center;
   background-size: cover;
-
-  @media (max-width: 700px) {
-    grid-template-columns: [SignInInfo] 0% [SignInForm] 100%;
-  }
 `;
 
 export const SignInInfo = styled.div`
-  grid-column: SignInInfo;
   height: 100vh;
 
   display: flex;
@@ -32,8 +24,12 @@ export const SignInInfo = styled.div`
 `;
 
 export const SignInForm = styled.div`
-  grid-column: SignInForm;
   height: 100vh;
+  width: 100%;
+  max-width: 44rem;
+
+  background: rgba(250, 250, 250, 0.5);
+  backdrop-filter: blur(50px);
 
   display: flex;
   align-items: center;
@@ -41,8 +37,12 @@ export const SignInForm = styled.div`
   flex-direction: column;
   gap: 6rem;
 
-  background: rgba(250, 250, 250, 0.5);
-  backdrop-filter: blur(50px);
+  @media (max-width: 900px) {
+    width: 80vw;
+    margin: auto;
+    background: none;
+    backdrop-filter: none;
+  }
 `;
 
 export const SignInImage = styled.img`
@@ -60,7 +60,11 @@ export const SignInFormContent = styled.div`
   gap: 10vh;
 
   @media (max-width: 900px) {
-    width: 80%;
+    background: rgba(250, 250, 250, 0.5);
+    backdrop-filter: blur(50px);
+    width: 90vw;
+    padding: 16vh 3rem;
+    border-radius: var(--radius);
   }
 `;
 
@@ -70,11 +74,6 @@ export const SignInTitle = styled.h1`
   font-family: 'Montserrat', sans-serif;
 
   color: var(--gray-700);
-  /* color: #212529; */
-
-  @media (max-width: 700px) {
-    font-size: 30px;
-  }
 `;
 
 export const SignInInputs = styled.div`
