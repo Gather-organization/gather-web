@@ -4,7 +4,7 @@ interface IPath {
   roles?: string[];
 }
 
-export const SideBarData: IPath[] = [
+const sideBarData: IPath[] = [
   {
     title: 'Home',
     path: '/',
@@ -35,3 +35,5 @@ export const SideBarData: IPath[] = [
     roles: ['evaluator', 'organizationalUnit'],
   },
 ];
+
+export default sideBarData;

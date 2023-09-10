@@ -10,8 +10,8 @@ export const Glider = styled.span<Props>`
 
   display: flex;
 
-  height: 3rem;
-  width: 12.5rem;
+  height: 2rem;
+  width: 4rem;
 
   background-color: ${({ theme }) => theme.accentBackground};
   border-radius: 99px;
@@ -34,8 +34,7 @@ export const Group = styled.div`
 
   padding: 0.3rem;
   background-color: ${(props) => props.theme.background};
-  border: 2px solid ${(props) => props.theme.accent};
-  border-radius: 99px;
+  border-radius: var(--radius);
 
   * {
     z-index: 1;
@@ -47,10 +46,10 @@ export const Tab = styled.label`
   align-items: center;
   justify-content: center;
 
-  height: 3rem;
-  width: 12.5rem;
+  height: 2rem;
+  width: 4rem;
 
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: bold;
 
   border-radius: 99px;

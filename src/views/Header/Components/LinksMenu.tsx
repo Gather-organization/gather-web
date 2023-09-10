@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { Dropdown, DropdownDivider, DropdownItem } from 'shared/components';
-import { SideBarData } from 'shared/data/SideBarData';
+import sideBarData from 'shared/data/sideBarData';
 import { IconBackground, MenuIcon } from '../styled';
 
 type Props = {
@@ -26,7 +26,7 @@ const LinksMenu = ({ userRoles }: Props) => {
         positionTop="1.1em"
         positionLeft="-1em"
       >
-        {SideBarData.map(({ title, path, roles }, index) => {
+        {sideBarData.map(({ title, path, roles }, index) => {
           if (roles)
             if (!roles?.some((element) => userRoles.includes(element)))
               return <React.Fragment key={index}></React.Fragment>;
@@ -40,7 +40,7 @@ const LinksMenu = ({ userRoles }: Props) => {
               >
                 <span>{title}</span>
               </DropdownItem>
-              {index !== SideBarData.length - 1 && <DropdownDivider />}
+              {index !== sideBarData.length - 1 && <DropdownDivider />}
             </React.Fragment>
           );
         })}

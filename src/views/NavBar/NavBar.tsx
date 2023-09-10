@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-import { SideBarData } from 'shared/data/SideBarData';
+import sideBarData from 'shared/data/sideBarData';
 import { useRoles } from 'shared/hooks';
 
 import { HomeIcon, List, NavBarContainer, NavBarPlaceholder } from './styled';
@@ -10,7 +10,7 @@ export const NavBar = () => {
   const { userRoles } = useRoles();
 
   useEffect(() => {
-    const data = SideBarData.filter(
+    const data = sideBarData.filter(
       (sbd) => !sbd.roles || sbd.roles.includes(userRoles[0])
     );
   }, [userRoles]);

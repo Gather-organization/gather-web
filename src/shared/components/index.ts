@@ -7,6 +7,7 @@ export { SearchBox } from 'shared/components/SearchBox/SearchBox';
 export { Table } from 'shared/components/Table/Table';
 export * from 'shared/components/Titles';
 export * from './ActionCard/ActionCard';
+export { default as ButtonGroup } from './Buttons/ButtonGroup/ButtonGroup';
 export * from './Divider/Divider';
 export { Dropdown, DropdownDivider, DropdownItem } from './Dropdown';
 export * from './FileDisplay/FileDisplay';
