@@ -14,7 +14,8 @@ export const ButtonLink = styled.a<Props>`
   font-size: 16px;
   font-weight: 700;
 
-  color: ${(props) => (props.secondary ? '#9794ff' : props.theme.accent)};
+  color: ${({ secondary, theme }) =>
+    secondary ? theme.accent : theme.primary};
 
   &::after {
     content: '';

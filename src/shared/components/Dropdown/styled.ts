@@ -42,7 +42,7 @@ export const DropdownItem = styled.li`
 
   &:hover {
     color: ${({ theme }) => theme.accent};
-    background-color: ${({ theme }) => theme.accentBackground};
+    background-color: ${({ theme }) => theme.primaryBackground};
     border-radius: var(--radius);
   }
 `;

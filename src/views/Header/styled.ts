@@ -9,7 +9,8 @@ export const HeaderStyled = styled.header`
   justify-content: center;
   height: 5vh;
 
-  background: rgba(246, 248, 250, 0.7);
+  background: ${({ theme }) => theme.blurBackground};
+  backdrop-filter: blur(8px);
 
   min-width: 100vw;
 `;
@@ -17,11 +18,13 @@ export const HeaderStyled = styled.header`
 export const HeaderColumn1 = styled.div`
   grid-column: column1;
 `;
+
 export const HeaderColumn2 = styled.div`
   grid-column: column2;
   display: flex;
   justify-content: center;
 `;
+
 export const HeaderColumn3 = styled.div`
   grid-column: column3;
   display: flex;
@@ -35,7 +38,7 @@ export const HeaderTitle = styled.a`
   padding: 0.4em;
 
   color: var(--purple-500);
-  color: ${({ theme }) => theme.accent};
+  color: ${({ theme }) => theme.primary};
 
   @media (max-width: 640px) {
     font-size: 25px;
@@ -52,7 +55,7 @@ export const IconBackground = styled.div`
   transition: 0.3s;
 
   &:active {
-    background: var(--purple-300);
+    background: ${({ theme }) => theme.primaryBackground};
     border-radius: 100%;
   }
 `;
@@ -61,7 +64,7 @@ const iconCss = css`
   width: 1.4em;
   height: 1.4em;
 
-  color: ${({ theme }) => theme.accent};
+  color: ${({ theme }) => theme.primary};
 
   cursor: pointer;
 `;

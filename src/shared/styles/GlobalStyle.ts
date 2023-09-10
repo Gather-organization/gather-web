@@ -140,12 +140,12 @@ export const GlobalStyles = styled.createGlobalStyle`
     .react-datepicker__month-text--keyboard-selected,
     .react-datepicker__year-text--selected,
     .react-datepicker__year-text--keyboard-selected {
-      background: ${({ theme }) => theme.accentBackground};
-      color: ${({ theme }) => theme.accent};
-      border: 1.5px solid ${({ theme }) => theme.accent};
+      background: ${({ theme }) => theme.primaryBackground};
+      color: ${({ theme }) => theme.primary};
+      border: 1.5px solid ${({ theme }) => theme.primary};
       font-weight: 700;
       &:hover {
-        background: ${({ theme }) => theme.accentBackground};
+        background: ${({ theme }) => theme.primaryBackground};
         color: ${({ theme }) => theme.text};
       }
     }
@@ -155,8 +155,8 @@ export const GlobalStyles = styled.createGlobalStyle`
     .react-datepicker__quarter-text,
     .react-datepicker__year-text {
       &:hover {
-        background: ${({ theme }) => theme.accentBackground};
-        color: ${({ theme }) => theme.accent};
+        background: ${({ theme }) => theme.primaryBackground};
+        color: ${({ theme }) => theme.primary};
       }
     }
 

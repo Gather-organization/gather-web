@@ -1,5 +1,5 @@
-import styled from 'styled-components';
 import Select from 'react-select';
+import styled from 'styled-components';
 
 interface Props {
   error?: boolean;
@@ -61,7 +61,7 @@ export const CustomSelect = styled(Select)<Props>`
       margin: 10px;
       height: 40px;
 
-      background: ${({ theme }) => theme.accentBackground};
+      background: ${({ theme }) => theme.primaryBackground};
       border-radius: var(--radius);
     }
     &::-webkit-scrollbar-thumb {
@@ -109,7 +109,7 @@ export const CustomSelect = styled(Select)<Props>`
   .select__option--is-focused,
   .select__option:hover {
     color: ${({ theme }) => theme.accent};
-    background-color: ${({ theme }) => theme.accentBackground};
+    background-color: ${({ theme }) => theme.primaryBackground};
   }
 
   .select__option--is-selected {
@@ -128,7 +128,7 @@ export const CustomSelect = styled(Select)<Props>`
   }
 
   .select__multi-value {
-    background: ${({ theme }) => theme.accentBackground};
+    background: ${({ theme }) => theme.primaryBackground};
     border-radius: 2px;
   }
 

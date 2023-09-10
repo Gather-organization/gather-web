@@ -10,10 +10,25 @@ export const Home = () => {
   return (
     <Container>
       <HomePageContent>
-        <Card style={{ width: '30vw' }}>
+        <Card glow>
+          <Card.Title>Something</Card.Title>
           <Title>Something</Title>
           <div>something something other something</div>
+          <div>something something other something</div>
+          <div>something something other something</div>
+          <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+            dolorem, iure repudiandae delectus voluptas cum? Porro deleniti
+            repellendus molestias quaerat, sequi veniam cumque. Reprehenderit
+            exercitationem aliquam rem pariatur voluptatum quasi.
+          </div>
         </Card>
+        <div>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+          dolorem, iure repudiandae delectus voluptas cum? Porro deleniti
+          repellendus molestias quaerat, sequi veniam cumque. Reprehenderit
+          exercitationem aliquam rem pariatur voluptatum quasi.
+        </div>
       </HomePageContent>
     </Container>
   );

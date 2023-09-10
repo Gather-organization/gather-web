@@ -13,7 +13,7 @@ export const Glider = styled.span<Props>`
   height: 2rem;
   width: 4rem;
 
-  background-color: ${({ theme }) => theme.accentBackground};
+  background-color: ${({ theme }) => theme.primaryBackground};
   border-radius: 99px;
 
   transition: 0.25s ease-out;
@@ -33,7 +33,7 @@ export const Group = styled.div`
   align-items: center;
 
   padding: 0.3rem;
-  background-color: ${(props) => props.theme.background};
+  background-color: ${({ theme }) => theme.background};
   border-radius: var(--radius);
 
   * {
@@ -59,6 +59,6 @@ export const Tab = styled.label`
   z-index: 3;
 
   ${HiddenRadio}:checked + & {
-    color: ${({ theme }) => theme.accent};
+    color: ${({ theme }) => theme.primary};
   }
 `;

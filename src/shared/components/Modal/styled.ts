@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import { IoIosClose } from 'react-icons/io';
 import { motion } from 'framer-motion';
+import { IoIosClose } from 'react-icons/io';
+import styled from 'styled-components';
 
 interface Props {
   width: string;
@@ -50,7 +50,7 @@ export const ModalWrapper = styled(motion.div)<Props>`
     margin: 40px;
     height: 40px;
 
-    background: ${({ theme }) => theme.accentBackground};
+    background: ${({ theme }) => theme.primaryBackground};
     border-radius: var(--radius);
   }
   &::-webkit-scrollbar-thumb {
@@ -75,7 +75,7 @@ export const CloseModalButton = styled(IoIosClose)`
   z-index: 10;
 
   cursor: pointer;
-  color: ${({ theme }) => theme.accent}; ;
+  color: ${({ theme }) => theme.accent};
 `;
 
 export const ModalBody = styled.div`

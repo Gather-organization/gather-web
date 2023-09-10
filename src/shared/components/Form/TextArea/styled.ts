@@ -43,7 +43,7 @@ export const StyledTextArea = styled.textarea<Props>`
   }
 
   &:-webkit-autofill {
-    background-color: ${({ theme }) => theme.accentBackground};
+    background-color: ${({ theme }) => theme.primaryBackground};
     -webkit-box-shadow: 0 0 0px 1000px ${({ theme }) => theme.body} inset;
     -webkit-text-fill-color: ${({ theme }) => theme.text};
   }

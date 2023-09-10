@@ -10,6 +10,7 @@ export const NavBarPlaceholder = styled.div`
 
 export const NavBarContainer = styled.div`
   position: fixed;
+  z-index: -100;
 
   height: 100%;
   width: 200px;
@@ -39,8 +40,7 @@ export const List = styled.div`
 
   border-radius: var(--radius);
 
-  background: rgba(246, 248, 250, 0.75);
-  background: rgba(255, 255, 255, 0.9);
+  background: ${({ theme }) => theme.blurBackground};
 `;
 
 const iconCss = css`
@@ -50,9 +50,9 @@ const iconCss = css`
   padding: 6px;
   border-radius: 8px;
 
-  color: ${({ theme }) => theme.accent};
-  background-color: ${({ theme }) => theme.accentBackground};
-  border: 2px solid ${({ theme }) => theme.accentBackground};
+  color: ${({ theme }) => theme.primary};
+  background-color: ${({ theme }) => theme.primaryBackground};
+  border: 2px solid ${({ theme }) => theme.primaryBackground};
 
   cursor: pointer;
 
@@ -63,7 +63,7 @@ const iconCss = css`
   }
 
   :active {
-    border: 2px solid ${({ theme }) => theme.accent};
+    border: 2px solid ${({ theme }) => theme.primary};
   }
 `;
 

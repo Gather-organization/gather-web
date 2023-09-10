@@ -4,16 +4,24 @@ declare module 'styled-components' {
   export interface DefaultTheme {
     body: string;
     text: string;
+
     toggleBorder: string;
     background: string;
+
     border: string;
-    main: string;
+
+    primary: string;
+    primaryBackground: string;
+
     accent: string;
-    accentBackground: string;
-    hoverBorder: string;
+    accentBackgroung: string;
+
     disabledText: string;
-    boxShadow: string;
     disabledBackground: string;
+
+    hoverBorder: string;
+    boxShadow: string;
     blurBackground: string;
+    glow: string;
   }
 }

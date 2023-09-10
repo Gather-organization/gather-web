@@ -16,8 +16,8 @@ export const ActionCardStyle = styled.div`
   padding: 1rem;
   box-sizing: border-box;
 
-  background-color: ${(props) => props.theme.accentBackground};
-  color: ${({ theme }) => theme.accent};
+  background-color: ${(props) => props.theme.primaryBackground};
+  color: ${({ theme }) => theme.primary};
   border-radius: var(--radius);
 
   transition: all 300ms ease-in-out;

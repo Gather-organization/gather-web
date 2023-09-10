@@ -46,17 +46,17 @@ export const StyledButton = styled.button<Props>`
   ${(props) =>
     props.secondary &&
     css`
-      background: ${({ theme }) => theme.accentBackground};
+      background: ${({ theme }) => theme.primary};
       color: ${({ theme }) => theme.accent};
-      border: 2px solid ${({ theme }) => theme.accentBackground};
+      border: 2px solid ${({ theme }) => theme.primaryBackground};
     `}
 
   ${(props) =>
     props.outline &&
     css`
-      background: ${({ theme }) => theme.accentBackground};
+      background: ${({ theme }) => theme.primaryBackground};
       color: ${({ theme }) => theme.accent};
-      border: 2px solid ${({ theme }) => theme.accent};
+      border: 2px solid ${({ theme }) => theme.primary};
 
       font-weight: 500;
 

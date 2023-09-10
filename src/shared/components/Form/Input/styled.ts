@@ -44,7 +44,7 @@ export const StyledInput = styled.input<Props>`
   }
 
   &:-webkit-autofill {
-    background-color: ${({ theme }) => theme.accentBackground};
+    background-color: ${({ theme }) => theme.primaryBackground};
     -webkit-box-shadow: 0 0 0px 1000px ${({ theme }) => theme.background} inset;
     -webkit-text-fill-color: ${({ theme }) => theme.text};
   }
