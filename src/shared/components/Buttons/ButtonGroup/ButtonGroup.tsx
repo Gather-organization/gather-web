@@ -20,6 +20,7 @@ const ButtonGroup = ({ name, options, setValue, currentValue }: Props) => {
       (options) => options.label === currentValue
     );
     setIndexValue(index);
+    //eslint-disable-next-line
   }, [currentValue]);
 
   return (
@@ -67,6 +68,7 @@ const Item = (props: ItemProps) => {
         name={name}
         onClick={() => updateValueHandler()}
         checked={currentValue === label}
+        readOnly
       />
       <Tab htmlFor={id}>{label}</Tab>
     </>

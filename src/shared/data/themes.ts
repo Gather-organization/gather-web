@@ -1,6 +1,6 @@
-import { ThemeOptions } from 'shared/Types';
+import { ThemeModes } from 'shared/Types';
 
-type ThemeMode = { label: ThemeOptions };
+type ThemeMode = { label: ThemeModes };
 
 const themeModes: ThemeMode[] = [
   {

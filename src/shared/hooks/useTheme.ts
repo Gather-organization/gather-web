@@ -1,15 +1,26 @@
 import { useEffect } from 'react';
-import { ThemeOptions } from 'shared/Types';
-import { updateTheme } from 'shared/store/theme';
+
+import { ThemeModes, ThemeOptions } from 'shared/Types';
+import {
+  updateMode,
+  updateTheme as updateThemeSelector,
+} from 'shared/store/theme';
 import { useAppDispatch, useAppSelector } from './reduxHooks';
 
 const useTheme = () => {
   const dispatch = useAppDispatch();
-  const theme = useAppSelector(({ theme }) => theme.mode);
+  const mode = useAppSelector(({ theme }) => theme.mode);
+  const option = useAppSelector(({ theme }) => theme.option);
 
   const setTheme = (theme: ThemeOptions) => {
-    dispatch(updateTheme(theme));
-    window.localStorage.setItem('theme', theme);
+    dispatch(updateThemeSelector(theme));
+    window.localStorage.setItem('theme_option', theme);
+  };
+
+  const setMode = (mode: ThemeModes) => {
+    window.localStorage.setItem('theme_mode', mode);
+    dispatch(updateMode(mode));
+    updateTheme(mode);
   };
 
   const autoTheme = () =>
@@ -17,26 +28,18 @@ const useTheme = () => {
       ? 'Dark'
       : 'Light';
 
-  const manualTheme = () =>
-    window.localStorage.getItem('theme')! as ThemeOptions;
-
-  const checkTheme = () => {
-    console.log(theme);
-    const updatedTheme = (
-      theme === 'Auto' ? autoTheme() : manualTheme()
-    ) as ThemeOptions;
+  const updateTheme = (mode: ThemeModes) => {
+    const updatedTheme = (mode === 'Auto' ? autoTheme() : mode) as ThemeOptions;
 
     setTheme(updatedTheme);
-
-    window.localStorage.setItem('theme', updatedTheme);
   };
 
   useEffect(() => {
-    checkTheme();
+    updateTheme(mode);
     //eslint-disable-next-line
   }, []);
 
-  return { theme, setTheme };
+  return { theme: option, setTheme, setMode, mode };
 };
 
 export default useTheme;
