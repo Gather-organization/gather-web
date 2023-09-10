@@ -1,20 +1,15 @@
 import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import { Dropdown } from 'shared/components/Dropdown/Dropdown';
-import {
-  DropdownDivider,
-  DropdownItem,
-} from 'shared/components/Dropdown/styled';
+import { Dropdown, DropdownDivider, DropdownItem } from 'shared/components';
 import { SideBarData } from 'shared/data/SideBarData';
-
 import { IconBackground, MenuIcon } from '../styled';
 
 type Props = {
   userRoles: string[];
 };
 
-const DropDownMenu = ({ userRoles }: Props) => {
+const LinksMenu = ({ userRoles }: Props) => {
   const [navMenu, setNavMenu] = useState(false);
 
   const ref = useRef<HTMLDivElement>(null);
@@ -54,4 +49,4 @@ const DropDownMenu = ({ userRoles }: Props) => {
   );
 };
 
-export default DropDownMenu;
+export default LinksMenu;

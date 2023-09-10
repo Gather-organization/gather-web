@@ -8,6 +8,7 @@ export { Table } from 'shared/components/Table/Table';
 export * from 'shared/components/Titles';
 export * from './ActionCard/ActionCard';
 export * from './Divider/Divider';
+export { Dropdown, DropdownDivider, DropdownItem } from './Dropdown';
 export * from './FileDisplay/FileDisplay';
 export * from './Modal/Modal';
 export * from './Options/Options';

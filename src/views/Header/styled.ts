@@ -1,4 +1,5 @@
 import { FaBars } from 'react-icons/fa';
+import { IoIosArrowDown } from 'react-icons/io';
 import styled, { css } from 'styled-components';
 
 export const HeaderStyled = styled.header`
@@ -68,4 +69,20 @@ const iconCss = css`
 export const MenuIcon = styled(FaBars)`
   ${iconCss}
   float: left;
+`;
+
+type IconProps = {
+  $spin: boolean;
+};
+
+export const ArrowIcon = styled(IoIosArrowDown)<IconProps>`
+  ${iconCss}
+
+  transition: all ease-in-out 0.3s;
+
+  ${(props) =>
+    props.$spin &&
+    css`
+      transform: rotate(90deg);
+    `}
 `;

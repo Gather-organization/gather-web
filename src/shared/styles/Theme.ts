@@ -8,7 +8,7 @@ export const lightTheme = {
   toggleBorder: '#FFF',
   main: '#7ceca7',
   accent: '#3661ed',
-  accentBackground: '#e0e8fd',
+  accentBackground: '#e6eef9',
   hoverBorder: 'var(--gray-400)',
   boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px',
   blurBackground: 'rgba(255, 255, 255, 0.25)',

@@ -30,6 +30,7 @@ export const Collapse = ({ title, children, options, underline }: Props) => {
         <CollapseTitle onClick={() => handleToggleCollapse()}>
           {title}
         </CollapseTitle>
+
         <CollapseOptions>
           {options}
           <ToggleCollapseIcon
@@ -38,6 +39,7 @@ export const Collapse = ({ title, children, options, underline }: Props) => {
           />
         </CollapseOptions>
       </CollapseHead>
+
       {!collapseState && (
         <CollapseBody>
           {children.length > 0 ? (

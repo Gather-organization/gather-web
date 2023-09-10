@@ -4,7 +4,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import { ButtonLink } from 'shared/components';
 import { useRoles } from 'shared/hooks';
 import { RootState, authActions } from 'shared/store';
-import DropDownMenu from './Components/DropDownMenu';
 
 import {
   HeaderColumn1,
@@ -12,9 +11,11 @@ import {
   HeaderColumn3,
   HeaderStyled,
   HeaderTitle,
-} from './styled';
+  LinksMenu,
+  OptionsMenu,
+} from '.';
 
-export const Header = () => {
+const Header = () => {
   const { userRoles } = useRoles();
 
   const navigate = useNavigate();
@@ -27,7 +28,7 @@ export const Header = () => {
   return (
     <HeaderStyled>
       <HeaderColumn1>
-        <DropDownMenu userRoles={userRoles} />
+        <LinksMenu userRoles={userRoles} />
       </HeaderColumn1>
 
       <HeaderColumn2>
@@ -37,7 +38,7 @@ export const Header = () => {
       </HeaderColumn2>
 
       <HeaderColumn3>
-        <DropDownMenu userRoles={userRoles} />
+        <OptionsMenu />
 
         {auth ? (
           <ButtonLink onClick={() => logoutHandler()}>Sair</ButtonLink>
@@ -48,3 +49,5 @@ export const Header = () => {
     </HeaderStyled>
   );
 };
+
+export default Header;
